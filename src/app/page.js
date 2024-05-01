@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <div
@@ -14,9 +14,12 @@ export default function Home() {
         <div>Car Model - </div>
         <input className="p-1 border border-gray-800"></input>{" "}
       </div>
-      <button className="p-2 bg-black text-white flex justify-center items-center rounded-md hover:bg-gray-700">
+      <Link
+        href="/home"
+        className="p-2 bg-black text-white flex justify-center items-center rounded-md hover:bg-gray-700"
+      >
         Confirm
-      </button>
+      </Link>
     </div>
   );
 }
