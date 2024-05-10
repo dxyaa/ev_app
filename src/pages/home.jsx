@@ -40,11 +40,17 @@ const Home = () => {
               >
                 Charge-Z{" "}
               </p>
-              <p
+              <div
                 className={`${poppins.variable} font-sans text-center text-xl text-slate-600`}
               >
-                Your one-stop destination for all things related to your ev!
-              </p>
+                <Typewriter
+                  options={{
+                    strings: ["some ev stuff!", "ev stuff pnem"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div class="flex justify-end absolute top-10 right-10">
@@ -53,32 +59,26 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        {/*<TypingEffect />
-        <div>
-          <h3 className="text-white">GeeksforGeeks Typing Animation</h3>
-          <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString("Hello World!")
-                .callFunction(() => {
-                  console.log("String typed out!");
-                })
-                .pauseFor(2500)
-                .deleteAll()
-                .callFunction(() => {
-                  console.log("All strings were deleted");
-                })
-                .start();
-            }}
-          />
-          </div>*/}
-        <Typewriter
-          options={{
-            strings: ["Hello", "World"],
-            autoStart: true,
-            loop: true,
-          }}
-        />
+        <div className="absolute bottom-20 left-20 ">
+          <Link
+            href="/"
+            class="font-bold text-gray-700 rounded-full flex items-center justify-center bg-green-600"
+            style={{ height: 180, width: 180 }}
+          >
+            {" "}
+            Charge Now
+          </Link>
+        </div>
+        <div className="absolute bottom-20 right-20 ">
+          <Link
+            href="/"
+            class="font-bold text-gray-700 rounded-full flex items-center justify-center bg-blue-600"
+            style={{ height: 180, width: 180 }}
+          >
+            {" "}
+            Book Later
+          </Link>
+        </div>
       </div>
     </div>
   );
